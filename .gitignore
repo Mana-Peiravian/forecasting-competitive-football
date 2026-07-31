@@ -1,0 +1,19 @@
+# Data
+data/
+*.parquet
+
+# Models
+models/
+*.joblib
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/editor
+.DS_Store
+.vscode/
