@@ -1,0 +1,20 @@
+name: football-ml
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.14
+  - numpy=2.4.6
+  - pandas=3.0.5
+  - scipy=1.17.1
+  - scikit-learn=1.9.0
+  - matplotlib=3.11.1
+  - pyarrow=25.0
+  - jupyterlab
+  - ipykernel
+  - joblib
+  - xgboost=3.2
+  - lightgbm=4.7
+  - pip
+  - pip:
+      - imodels==2.0.4
+      - statsbombpy
