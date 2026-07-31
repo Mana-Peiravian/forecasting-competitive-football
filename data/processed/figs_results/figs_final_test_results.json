@@ -1,0 +1,28 @@
+{
+  "test_set_opened": true,
+  "test_matches": 79,
+  "classification": {
+    "feature_set": "conventional_plus_all_network",
+    "n_features": 186,
+    "max_rules": 2,
+    "metrics": {
+      "rps": 0.21771851582340304,
+      "log_loss": 1.018962636734074,
+      "brier": 0.6115105484282731,
+      "ece": 0.1413795631492314,
+      "accuracy": 0.46835443037974683,
+      "balanced_accuracy": 0.5165329768270944,
+      "macro_f1": 0.48002244668911337
+    }
+  },
+  "regression": {
+    "feature_set": "conventional_plus_possession_flow",
+    "n_features": 42,
+    "max_rules": 2,
+    "metrics": {
+      "mae": 1.3526745015839248,
+      "rmse": 1.7479103056203438,
+      "correlation": 0.42753548579576783
+    }
+  }
+}

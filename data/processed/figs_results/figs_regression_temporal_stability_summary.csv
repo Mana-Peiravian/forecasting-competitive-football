@@ -1,0 +1,8 @@
+feature,folds_selected,mean_importance,selection_rate
+diff_completed_passes_roll5_mean,2,0.5910730535079595,0.5
+diff_completed_passes_expanding_mean,1,0.7801275828647015,0.25
+home_completed_passes_roll10_mean,1,0.609474427097721,0.25
+diff_completed_passes_roll3_mean,1,0.43158181217316927,0.25
+away_completed_passes_roll3_mean,1,0.390525572902279,0.25
+home_completed_passes_expanding_mean,1,0.38627208081091174,0.25
+away_completed_passes_roll10_mean,1,0.21987241713529843,0.25

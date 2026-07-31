@@ -1,0 +1,21 @@
+{
+    "random_state": 42,
+    "test_start_date": "2016-04-02",
+    "calibration_start_date": "2016-02-19",
+    "training_matches": 240,
+    "calibration_matches": 61,
+    "sealed_test_matches": 79,
+    "temporal_cv_splits": 4,
+    "search_budget_per_model": 8,
+    "classification_class_order": [
+        "A",
+        "D",
+        "H"
+    ],
+    "feature_count": 186,
+    "conventional_feature_count": 6,
+    "network_feature_count": 180,
+    "test_set_opened": false,
+    "selected_classifier": "RandomForest",
+    "selected_regressor": "RandomForest"
+}

@@ -1,0 +1,46 @@
+{
+  "notebook": 7,
+  "test_set_opened": false,
+  "selection_protocol": {
+    "complexity_selected_using": "4-fold expanding date-blocked temporal CV on 240 model-selection matches",
+    "validation_role": "forward temporal confirmation only; not used to change locked candidate",
+    "test_matches": 79
+  },
+  "classification": {
+    "feature_set": "conventional_plus_all_network",
+    "n_features": 186,
+    "max_rules": 2,
+    "cv_mean_rps": 0.21482185073765117,
+    "validation_metrics": {
+      "rps": 0.21809413287227788,
+      "log_loss": 1.041497780323701,
+      "brier": 0.6260007282339672,
+      "ece": 0.052320001853049906,
+      "accuracy": 0.45901639344262296,
+      "balanced_accuracy": 0.38095238095238093,
+      "macro_f1": 0.28268439379550486
+    },
+    "selected_feature_concept": "leakage",
+    "matched_cart_rps": 0.21975827142803406
+  },
+  "regression": {
+    "feature_set": "conventional_plus_possession_flow",
+    "n_features": 42,
+    "max_rules": 2,
+    "cv_mean_mae": 1.4749653620712295,
+    "validation_metrics": {
+      "mae": 1.421406380912131,
+      "rmse": 1.7524532740122973,
+      "correlation": 0.4639451061910217
+    },
+    "selected_feature_concept": "completed_passes",
+    "matched_cart_mae": 1.421406380912131
+  },
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "imodels": "2.0.4"
+  }
+}

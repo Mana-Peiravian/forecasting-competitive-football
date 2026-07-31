@@ -1,0 +1,7 @@
+feature,folds_selected,mean_importance,selection_rate
+home_median_zone_leakage_roll10_mean,3,0.5528333509237496,0.75
+diff_mean_zone_leakage_roll5_mean,1,0.7650104334289665,0.25
+diff_mean_zone_leakage_roll3_mean,1,0.6186191811119206,0.25
+diff_maximum_zone_leakage_roll10_mean,1,0.4221576918367137,0.25
+away_median_zone_leakage_roll3_mean,1,0.3007230742801169,0.25
+diff_median_zone_leakage_expanding_mean,1,0.23498956657103343,0.25

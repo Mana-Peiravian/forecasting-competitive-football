@@ -1,0 +1,3 @@
+model,feature_set,split_budget,actual_splits,mae,rmse,correlation
+FIGS,conventional_plus_possession_flow,2,2,1.421406380912131,1.7524532740122973,0.4639451061910217
+CART,conventional_plus_possession_flow,2,2,1.421406380912131,1.7524532740122973,0.4639451061910217

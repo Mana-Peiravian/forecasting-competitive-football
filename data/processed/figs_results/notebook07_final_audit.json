@@ -1,0 +1,66 @@
+{
+  "notebook": 7,
+  "status": "complete",
+  "test_set_opened": true,
+  "development_matches": 301,
+  "test_matches": 79,
+  "classification": {
+    "selected_feature_set": "conventional_plus_all_network",
+    "max_rules": 2,
+    "dominant_network_concept": "leakage",
+    "figs_test_metrics": {
+      "rps": 0.21771851582340304,
+      "log_loss": 1.018962636734074,
+      "brier": 0.6115105484282731,
+      "ece": 0.1413795631492314,
+      "accuracy": 0.46835443037974683,
+      "balanced_accuracy": 0.5165329768270944,
+      "macro_f1": 0.48002244668911337
+    },
+    "random_forest_test_metrics": {
+      "rps": 0.21432545809310102,
+      "log_loss": 1.015193508422018,
+      "brier": 0.6057537405438832,
+      "ece": 0.1676163015021406,
+      "accuracy": 0.5443037974683544,
+      "balanced_accuracy": 0.44460784313725493,
+      "macro_f1": 0.42891414141414147
+    },
+    "market_test_metrics": {
+      "rps": 0.18945163801596418,
+      "log_loss": 0.922968374081447,
+      "brier": 0.538104367677319,
+      "ece": 0.0666343953425709,
+      "accuracy": 0.5822784810126582,
+      "balanced_accuracy": 0.46515151515151515,
+      "macro_f1": 0.4173390286347097
+    }
+  },
+  "regression": {
+    "selected_feature_set": "conventional_plus_possession_flow",
+    "max_rules": 2,
+    "dominant_network_concept": "completed_passes",
+    "figs_test_metrics": {
+      "mae": 1.3526745015839248,
+      "rmse": 1.7479103056203438,
+      "correlation": 0.42753548579576783
+    },
+    "random_forest_test_metrics": {
+      "mae": 1.3686322963149713,
+      "rmse": 1.6995194514742262,
+      "correlation": 0.4756120137264716
+    }
+  },
+  "protocol": {
+    "post_test_retuning": false,
+    "feature_selection_after_test": false,
+    "complexity_selection_after_test": false
+  },
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0",
+    "imodels": "2.0.4"
+  }
+}

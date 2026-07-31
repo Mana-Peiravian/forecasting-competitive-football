@@ -1,0 +1,9 @@
+fold,train_matches,feature,importance
+1,43,diff_completed_passes_roll5_mean,0.5684181878268307
+1,43,diff_completed_passes_roll3_mean,0.43158181217316927
+2,90,diff_completed_passes_roll5_mean,0.6137279191890882
+2,90,home_completed_passes_expanding_mean,0.38627208081091174
+3,140,home_completed_passes_roll10_mean,0.609474427097721
+3,140,away_completed_passes_roll3_mean,0.390525572902279
+4,199,diff_completed_passes_expanding_mean,0.7801275828647015
+4,199,away_completed_passes_roll10_mean,0.21987241713529843

@@ -1,0 +1,9 @@
+fold,train_matches,feature,importance
+1,43,diff_mean_zone_leakage_roll3_mean,0.6186191811119206
+1,43,home_median_zone_leakage_roll10_mean,0.3813808188880794
+2,90,home_median_zone_leakage_roll10_mean,0.5778423081632864
+2,90,diff_maximum_zone_leakage_roll10_mean,0.4221576918367137
+3,140,home_median_zone_leakage_roll10_mean,0.6992769257198831
+3,140,away_median_zone_leakage_roll3_mean,0.3007230742801169
+4,199,diff_mean_zone_leakage_roll5_mean,0.7650104334289665
+4,199,diff_median_zone_leakage_expanding_mean,0.23498956657103343

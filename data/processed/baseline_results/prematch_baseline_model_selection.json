@@ -1,0 +1,40 @@
+{
+    "classification": {
+        "selected_model": "RandomForest",
+        "selection_metric": "validation_rps",
+        "best_params": {
+            "model__max_depth": 4,
+            "model__max_features": 0.5,
+            "model__min_samples_leaf": 5
+        },
+        "validation_rps": 0.21055091449889465,
+        "validation_log_loss": 1.0266969316843648,
+        "validation_brier": 0.6114572152531469,
+        "validation_ece": 0.09759267165993991
+    },
+    "regression": {
+        "selected_model": "RandomForest",
+        "selection_metric": "validation_mae",
+        "best_params": {
+            "model__max_depth": null,
+            "model__max_features": "sqrt",
+            "model__min_samples_leaf": 5
+        },
+        "validation_mae": 1.358271768989331,
+        "validation_rmse": 1.687856751280965,
+        "validation_correlation": 0.5354881961386267
+    },
+    "development_protocol": {
+        "model_selection_matches": 240,
+        "validation_matches": 61,
+        "sealed_test_matches": 79,
+        "temporal_cv_splits": 4,
+        "search_budget_per_model": 8
+    },
+    "features": {
+        "combined_predictors": 186,
+        "conventional_predictors": 6,
+        "network_predictors": 180
+    },
+    "test_set_opened": false
+}
