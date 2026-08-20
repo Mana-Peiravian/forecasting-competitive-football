@@ -1,0 +1,24 @@
+\begin{table}[H]
+\centering\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Model & Cal. & RPS & Log loss & Brier & ECE & Acc. & CI low & CI high \\
+\midrule
+gradient\_boosting & raw & \textbf{0.116} & \textbf{0.652} & \textbf{0.346} & 0.112 & 0.774 & 0.068 & 0.167 \\
+frozen\_best\_prematch & platt & 0.120 & 0.664 & 0.359 & 0.112 & 0.765 & 0.068 & 0.180 \\
+xgboost & raw & 0.123 & 0.659 & 0.365 & 0.036 & 0.743 & 0.076 & 0.176 \\
+frozen\_market & raw & 0.131 & 0.685 & 0.372 & 0.122 & 0.735 & 0.068 & 0.205 \\
+gradient\_boosting & platt & 0.134 & 0.713 & 0.381 & 0.055 & 0.762 & 0.075 & 0.202 \\
+scratch\_figs & platt & 0.135 & 0.717 & 0.407 & 0.139 & 0.777 & 0.107 & 0.166 \\
+random\_forest & raw & 0.138 & 0.741 & 0.411 & 0.119 & 0.735 & 0.092 & 0.187 \\
+xgboost & platt & 0.143 & 0.755 & 0.402 & 0.073 & 0.715 & 0.087 & 0.208 \\
+random\_forest & platt & 0.146 & 0.818 & 0.435 & 0.189 & \textbf{0.782} & 0.086 & 0.223 \\
+lightgbm & raw & 0.146 & 0.811 & 0.441 & 0.191 & 0.686 & 0.088 & 0.209 \\
+lightgbm & platt & 0.147 & 0.767 & 0.421 & 0.042 & 0.735 & 0.093 & 0.204 \\
+scratch\_figs & raw & 0.177 & 0.870 & 0.503 & 0.235 & 0.738 & 0.157 & 0.197 \\
+dummy & raw & 0.243 & 1.032 & 0.621 & \textbf{0.003} & 0.500 & 0.208 & 0.279 \\
+dummy & platt & 0.244 & 1.029 & 0.622 & 0.097 & 0.500 & 0.228 & 0.258 \\
+\bottomrule
+\end{tabular}}
+\end{table}

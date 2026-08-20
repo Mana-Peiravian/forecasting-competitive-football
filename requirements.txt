@@ -1,0 +1,21 @@
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.1
+seaborn==0.13.2
+pyarrow==21.0.0
+joblib==1.5.2
+statsbombpy==1.21.0
+requests==2.32.5
+PySocks==1.7.1
+xgboost==3.4.1
+lightgbm==4.7.0
+imbalanced-learn==0.14.2
+shap==0.52.0
+psutil==7.0.0
+pytest==9.1.1
+nbformat==5.10.4
+imodels==2.0.4  # independent FIGS reference test only; never imported by production FIGS
+mlxtend==0.25.0  # transitive test-only imodels dependency
+

@@ -1,0 +1,9 @@
+Git history unavailable
+=======================
+
+The supplied project directory did not contain a .git directory and was not a
+Git working tree. Both `git status` and `git log --oneline --all` failed during
+the initial audit on 2026-08-20. Historical commits cannot be recovered from
+the files provided, so no history has been fabricated. The requirement to
+export genuine iterative Git history remains externally unresolved.
+

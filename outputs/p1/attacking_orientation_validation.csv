@@ -1,0 +1,3 @@
+side,shot_count,mean_shot_x,median_shot_x,pass_count,mean_pass_dx,orientation_supported
+home,5312,104.08672816265059,105.6,195716,7.791195405587688,True
+away,4175,103.53307784431138,105.1,182747,8.55077292650495,True

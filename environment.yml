@@ -3,18 +3,22 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.11,<3.14
-  - numpy=2.4.6
+  - numpy=2.5.2
   - pandas=3.0.5
-  - scipy=1.17.1
+  - scipy=1.18.0
   - scikit-learn=1.9.0
   - matplotlib=3.11.1
-  - pyarrow=25.0
+  - pyarrow=21.0.0
   - jupyterlab
   - ipykernel
   - joblib
-  - xgboost=3.2
+  - xgboost=3.4.1
   - lightgbm=4.7
   - pip
   - pip:
       - imodels==2.0.4
-      - statsbombpy
+      - statsbombpy==1.21.0
+      - imbalanced-learn==0.14.2
+      - shap==0.52.0
+      - pytest==9.1.1
+      - PySocks==1.7.1

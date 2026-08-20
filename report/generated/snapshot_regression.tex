@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & MAE & RMSE & $r$ & H/D/A RPS & H/D/A LL & H/D/A Acc. \\
+\midrule
+xgboost & \textbf{1.276} & \textbf{1.561} & 0.830 & 0.100 & 0.548 & 0.765 \\
+gradient\_boosting & 1.276 & 1.583 & \textbf{0.836} & \textbf{0.099} & \textbf{0.529} & 0.757 \\
+lightgbm & 1.310 & 1.583 & 0.824 & 0.103 & 0.573 & 0.776 \\
+random\_forest & 1.422 & 1.811 & 0.794 & 0.103 & 0.620 & \textbf{0.779} \\
+scratch\_figs & 1.619 & 1.981 & 0.741 & 0.125 & 0.692 & 0.721 \\
+dummy & 2.294 & 2.767 & -- & 0.244 & 1.029 & 0.500 \\
+\bottomrule
+\end{tabular}}
+\end{table}

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "football-ml-repro"
+version = "1.0.0"
+description = "Leakage-safe pre-match and in-play forecasting from StatsBomb La Liga events"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy==2.5.2",
+  "pandas==3.0.5",
+  "scipy==1.18.0",
+  "scikit-learn==1.9.0",
+  "matplotlib==3.11.1",
+  "seaborn==0.13.2",
+  "pyarrow==21.0.0",
+  "joblib==1.5.2",
+  "statsbombpy==1.21.0",
+  "requests==2.32.5",
+  "PySocks==1.7.1",
+  "xgboost==3.4.1",
+  "lightgbm==4.7.0",
+  "imbalanced-learn==0.14.2",
+  "shap==0.52.0",
+  "psutil==7.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==9.1.1",
+  "nbformat==5.10.4",
+  "imodels==2.0.4",
+  "mlxtend==0.25.0",
+]
+
+[project.scripts]
+football-ml-reproduce = "ml_project.pipeline:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

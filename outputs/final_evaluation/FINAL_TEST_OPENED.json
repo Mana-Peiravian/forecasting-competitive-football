@@ -1,0 +1,25 @@
+{
+  "opened_at_utc": "2026-08-20T01:40:06.984447+00:00",
+  "status": "completed",
+  "lock_sha256": "3d730d7d3ad2e774008d914f85f6e4d065d17819e9e7ed91578654b9ab1c239f",
+  "target_sha256": "728c9f6290e1a8a4d9d8c0d6858ca4f72f3f5523e9e97c89914eaa228fa931dc",
+  "expected_matches": 34,
+  "completed_at_utc": "2026-08-20T01:44:17.345558+00:00",
+  "result_files": [
+    "FINAL_TEST_OPENED.json",
+    "compute_profile_final_fit.csv",
+    "final_error_cases.csv",
+    "paired_rps_differences_vs_market.csv",
+    "prematch_classification_metrics.csv",
+    "prematch_classification_predictions.csv",
+    "prematch_regression_metrics.csv",
+    "prematch_regression_predictions.csv",
+    "prematch_reliability_bins.csv",
+    "snapshot_classification_by_minute.csv",
+    "snapshot_classification_metrics.csv",
+    "snapshot_classification_predictions.parquet",
+    "snapshot_regression_by_minute.csv",
+    "snapshot_regression_metrics.csv",
+    "snapshot_regression_predictions.parquet"
+  ]
+}

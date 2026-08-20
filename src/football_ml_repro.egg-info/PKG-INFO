@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: football-ml-repro
+Version: 1.0.0
+Summary: Leakage-safe pre-match and in-play forecasting from StatsBomb La Liga events
+Requires-Python: <3.14,>=3.11
+Requires-Dist: numpy==2.5.2
+Requires-Dist: pandas==3.0.5
+Requires-Dist: scipy==1.18.0
+Requires-Dist: scikit-learn==1.9.0
+Requires-Dist: matplotlib==3.11.1
+Requires-Dist: seaborn==0.13.2
+Requires-Dist: pyarrow==21.0.0
+Requires-Dist: joblib==1.5.2
+Requires-Dist: statsbombpy==1.21.0
+Requires-Dist: requests==2.32.5
+Requires-Dist: PySocks==1.7.1
+Requires-Dist: xgboost==3.4.1
+Requires-Dist: lightgbm==4.7.0
+Requires-Dist: imbalanced-learn==0.14.2
+Requires-Dist: shap==0.52.0
+Requires-Dist: psutil==7.0.0
+Provides-Extra: dev
+Requires-Dist: pytest==9.1.1; extra == "dev"
+Requires-Dist: nbformat==5.10.4; extra == "dev"
+Requires-Dist: imodels==2.0.4; extra == "dev"
+Requires-Dist: mlxtend==0.25.0; extra == "dev"

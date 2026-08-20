@@ -1,0 +1,415 @@
+match_id,clean_date,season_name,home_team,away_team,split_role
+3825562,2015-08-21,2015/2016,Málaga,Sevilla,train
+3825563,2015-08-22,2015/2016,Atlético Madrid,Las Palmas,train
+3825564,2015-08-22,2015/2016,RC Deportivo La Coruña,Real Sociedad,train
+3825565,2015-08-22,2015/2016,Espanyol,Getafe,train
+3825566,2015-08-22,2015/2016,Rayo Vallecano,Valencia,train
+266236,2015-08-23,2015/2016,Athletic Club,Barcelona,train
+3825567,2015-08-23,2015/2016,Sporting Gijón,Real Madrid,train
+3825568,2015-08-23,2015/2016,Real Betis,Villarreal,train
+3825569,2015-08-23,2015/2016,Levante UD,Celta Vigo,train
+3825570,2015-08-24,2015/2016,Granada,Eibar,train
+3825571,2015-08-28,2015/2016,Villarreal,Espanyol,train
+267422,2015-08-29,2015/2016,Barcelona,Málaga,train
+3825572,2015-08-29,2015/2016,Real Madrid,Real Betis,train
+3825573,2015-08-29,2015/2016,Real Sociedad,Sporting Gijón,train
+3825574,2015-08-29,2015/2016,Celta Vigo,Rayo Vallecano,train
+3825575,2015-08-30,2015/2016,Las Palmas,Levante UD,train
+3825576,2015-08-30,2015/2016,Valencia,RC Deportivo La Coruña,train
+3825577,2015-08-30,2015/2016,Getafe,Granada,train
+3825578,2015-08-30,2015/2016,Eibar,Athletic Club,train
+3825579,2015-08-30,2015/2016,Sevilla,Atlético Madrid,train
+3825580,2015-09-11,2015/2016,Levante UD,Sevilla,train
+266166,2015-09-12,2015/2016,Atlético Madrid,Barcelona,train
+3825581,2015-09-12,2015/2016,Espanyol,Real Madrid,train
+3825582,2015-09-12,2015/2016,Real Betis,Real Sociedad,train
+3825583,2015-09-12,2015/2016,Sporting Gijón,Valencia,train
+3825584,2015-09-13,2015/2016,Granada,Villarreal,train
+3825585,2015-09-13,2015/2016,Celta Vigo,Las Palmas,train
+3825586,2015-09-13,2015/2016,Málaga,Eibar,train
+3825587,2015-09-13,2015/2016,Athletic Club,Getafe,train
+3825588,2015-09-14,2015/2016,Rayo Vallecano,RC Deportivo La Coruña,train
+3825589,2015-09-18,2015/2016,Getafe,Málaga,train
+3825590,2015-09-19,2015/2016,Real Madrid,Granada,train
+3825591,2015-09-19,2015/2016,Valencia,Real Betis,train
+3825592,2015-09-19,2015/2016,Real Sociedad,Espanyol,train
+3825593,2015-09-19,2015/2016,Eibar,Atlético Madrid,train
+266490,2015-09-20,2015/2016,Barcelona,Levante UD,train
+3825594,2015-09-20,2015/2016,Sevilla,Celta Vigo,train
+3825595,2015-09-20,2015/2016,Villarreal,Athletic Club,train
+3825596,2015-09-20,2015/2016,RC Deportivo La Coruña,Sporting Gijón,train
+3825597,2015-09-20,2015/2016,Las Palmas,Rayo Vallecano,train
+3825598,2015-09-22,2015/2016,Atlético Madrid,Getafe,train
+3825599,2015-09-22,2015/2016,Espanyol,Valencia,train
+3825892,2015-09-22,2015/2016,Granada,Real Sociedad,train
+266467,2015-09-23,2015/2016,Celta Vigo,Barcelona,train
+3825600,2015-09-23,2015/2016,Málaga,Villarreal,train
+3825601,2015-09-23,2015/2016,Rayo Vallecano,Sporting Gijón,train
+3825602,2015-09-23,2015/2016,Athletic Club,Real Madrid,train
+3825848,2015-09-23,2015/2016,Levante UD,Eibar,train
+3825895,2015-09-23,2015/2016,Las Palmas,Sevilla,train
+3825603,2015-09-24,2015/2016,Real Betis,RC Deportivo La Coruña,train
+3825604,2015-09-25,2015/2016,Valencia,Granada,train
+267611,2015-09-26,2015/2016,Barcelona,Las Palmas,train
+3825605,2015-09-26,2015/2016,Sevilla,Rayo Vallecano,train
+3825606,2015-09-26,2015/2016,Real Madrid,Málaga,train
+3825607,2015-09-26,2015/2016,Villarreal,Atlético Madrid,train
+3825608,2015-09-26,2015/2016,Eibar,Celta Vigo,train
+3825609,2015-09-27,2015/2016,Real Sociedad,Athletic Club,train
+3825610,2015-09-27,2015/2016,Sporting Gijón,Real Betis,train
+3825611,2015-09-27,2015/2016,RC Deportivo La Coruña,Espanyol,train
+3825612,2015-09-27,2015/2016,Getafe,Levante UD,train
+3825613,2015-10-02,2015/2016,Celta Vigo,Getafe,train
+3825614,2015-10-03,2015/2016,Granada,RC Deportivo La Coruña,train
+3825615,2015-10-03,2015/2016,Espanyol,Sporting Gijón,train
+3825616,2015-10-03,2015/2016,Málaga,Real Sociedad,train
+3825617,2015-10-03,2015/2016,Sevilla,Barcelona,train
+3825618,2015-10-03,2015/2016,Las Palmas,Eibar,train
+3825619,2015-10-04,2015/2016,Levante UD,Villarreal,train
+3825620,2015-10-04,2015/2016,Rayo Vallecano,Real Betis,train
+3825621,2015-10-04,2015/2016,Atlético Madrid,Real Madrid,train
+3825622,2015-10-04,2015/2016,Athletic Club,Valencia,train
+3825623,2015-10-17,2015/2016,Valencia,Málaga,train
+3825624,2015-10-17,2015/2016,Eibar,Sevilla,train
+3825625,2015-10-17,2015/2016,Real Madrid,Levante UD,train
+3825626,2015-10-17,2015/2016,Real Betis,Espanyol,train
+3825627,2015-10-17,2015/2016,Barcelona,Rayo Vallecano,train
+3825628,2015-10-18,2015/2016,Getafe,Las Palmas,train
+3825629,2015-10-18,2015/2016,Villarreal,Celta Vigo,train
+3825630,2015-10-18,2015/2016,RC Deportivo La Coruña,Athletic Club,train
+3825631,2015-10-18,2015/2016,Real Sociedad,Atlético Madrid,train
+3825632,2015-10-19,2015/2016,Sporting Gijón,Granada,train
+3825633,2015-10-23,2015/2016,Rayo Vallecano,Espanyol,train
+3825634,2015-10-24,2015/2016,Granada,Real Betis,train
+3825635,2015-10-24,2015/2016,Celta Vigo,Real Madrid,train
+3825636,2015-10-24,2015/2016,Málaga,RC Deportivo La Coruña,train
+3825874,2015-10-24,2015/2016,Sevilla,Getafe,train
+3825637,2015-10-25,2015/2016,Barcelona,Eibar,train
+3825638,2015-10-25,2015/2016,Atlético Madrid,Valencia,train
+3825639,2015-10-25,2015/2016,Las Palmas,Villarreal,train
+3825640,2015-10-25,2015/2016,Levante UD,Real Sociedad,train
+3825641,2015-10-26,2015/2016,Athletic Club,Sporting Gijón,train
+3825642,2015-10-30,2015/2016,RC Deportivo La Coruña,Atlético Madrid,train
+3825643,2015-10-31,2015/2016,Real Madrid,Las Palmas,train
+3825644,2015-10-31,2015/2016,Real Sociedad,Celta Vigo,train
+3825645,2015-10-31,2015/2016,Getafe,Barcelona,train
+3825646,2015-10-31,2015/2016,Villarreal,Sevilla,train
+3825647,2015-10-31,2015/2016,Valencia,Levante UD,train
+3825648,2015-11-01,2015/2016,Eibar,Rayo Vallecano,train
+3825649,2015-11-01,2015/2016,Sporting Gijón,Málaga,train
+3825650,2015-11-01,2015/2016,Real Betis,Athletic Club,train
+3825651,2015-11-01,2015/2016,Espanyol,Granada,train
+3825652,2015-11-06,2015/2016,Las Palmas,Real Sociedad,train
+3825653,2015-11-07,2015/2016,Eibar,Getafe,train
+3825654,2015-11-07,2015/2016,Celta Vigo,Valencia,train
+3825655,2015-11-07,2015/2016,Rayo Vallecano,Granada,train
+3825656,2015-11-07,2015/2016,Levante UD,RC Deportivo La Coruña,train
+3825657,2015-11-07,2015/2016,Málaga,Real Betis,train
+3825658,2015-11-08,2015/2016,Atlético Madrid,Sporting Gijón,train
+3825659,2015-11-08,2015/2016,Athletic Club,Espanyol,train
+3825660,2015-11-08,2015/2016,Barcelona,Villarreal,train
+3825661,2015-11-08,2015/2016,Sevilla,Real Madrid,train
+266424,2015-11-21,2015/2016,Real Madrid,Barcelona,train
+3825662,2015-11-21,2015/2016,RC Deportivo La Coruña,Celta Vigo,train
+3825663,2015-11-21,2015/2016,Espanyol,Málaga,train
+3825664,2015-11-21,2015/2016,Real Sociedad,Sevilla,train
+3825888,2015-11-21,2015/2016,Valencia,Las Palmas,train
+3825665,2015-11-22,2015/2016,Granada,Athletic Club,train
+3825666,2015-11-22,2015/2016,Real Betis,Atlético Madrid,train
+3825667,2015-11-22,2015/2016,Villarreal,Eibar,train
+3825668,2015-11-22,2015/2016,Sporting Gijón,Levante UD,train
+3825669,2015-11-23,2015/2016,Getafe,Rayo Vallecano,train
+3825670,2015-11-27,2015/2016,Levante UD,Real Betis,train
+266885,2015-11-28,2015/2016,Barcelona,Real Sociedad,train
+3825671,2015-11-28,2015/2016,Celta Vigo,Sporting Gijón,train
+3825672,2015-11-28,2015/2016,Málaga,Granada,train
+3825673,2015-11-28,2015/2016,Las Palmas,RC Deportivo La Coruña,train
+3825674,2015-11-28,2015/2016,Atlético Madrid,Espanyol,train
+3825675,2015-11-29,2015/2016,Rayo Vallecano,Athletic Club,train
+3825676,2015-11-29,2015/2016,Getafe,Villarreal,train
+3825677,2015-11-29,2015/2016,Sevilla,Valencia,train
+3825678,2015-11-29,2015/2016,Eibar,Real Madrid,train
+267274,2015-12-05,2015/2016,Valencia,Barcelona,train
+3825679,2015-12-05,2015/2016,Real Betis,Celta Vigo,train
+3825680,2015-12-05,2015/2016,RC Deportivo La Coruña,Sevilla,train
+3825681,2015-12-05,2015/2016,Real Madrid,Getafe,train
+3825682,2015-12-05,2015/2016,Granada,Atlético Madrid,train
+3825683,2015-12-06,2015/2016,Real Sociedad,Eibar,train
+3825684,2015-12-06,2015/2016,Villarreal,Rayo Vallecano,train
+3825685,2015-12-06,2015/2016,Sporting Gijón,Las Palmas,train
+3825686,2015-12-06,2015/2016,Athletic Club,Málaga,train
+3825687,2015-12-07,2015/2016,Espanyol,Levante UD,train
+3825688,2015-12-11,2015/2016,Getafe,Real Sociedad,train
+266961,2015-12-12,2015/2016,Barcelona,RC Deportivo La Coruña,train
+3825689,2015-12-12,2015/2016,Celta Vigo,Espanyol,train
+3825690,2015-12-12,2015/2016,Las Palmas,Real Betis,train
+3825691,2015-12-12,2015/2016,Levante UD,Granada,train
+3825692,2015-12-12,2015/2016,Sevilla,Sporting Gijón,train
+3825693,2015-12-13,2015/2016,Atlético Madrid,Athletic Club,train
+3825694,2015-12-13,2015/2016,Eibar,Valencia,train
+3825695,2015-12-13,2015/2016,Villarreal,Real Madrid,train
+3825696,2015-12-13,2015/2016,Rayo Vallecano,Málaga,train
+3825697,2015-12-19,2015/2016,Valencia,Getafe,train
+3825698,2015-12-19,2015/2016,RC Deportivo La Coruña,Eibar,train
+3825699,2015-12-19,2015/2016,Real Betis,Sevilla,train
+3825891,2015-12-19,2015/2016,Espanyol,Las Palmas,train
+3825700,2015-12-20,2015/2016,Real Madrid,Rayo Vallecano,train
+3825701,2015-12-20,2015/2016,Málaga,Atlético Madrid,train
+3825702,2015-12-20,2015/2016,Real Sociedad,Villarreal,train
+3825703,2015-12-20,2015/2016,Athletic Club,Levante UD,train
+3825704,2015-12-20,2015/2016,Granada,Celta Vigo,train
+267327,2015-12-30,2015/2016,Barcelona,Real Betis,train
+3825705,2015-12-30,2015/2016,Eibar,Sporting Gijón,train
+3825706,2015-12-30,2015/2016,Celta Vigo,Athletic Club,train
+3825707,2015-12-30,2015/2016,Las Palmas,Granada,train
+3825708,2015-12-30,2015/2016,Levante UD,Málaga,train
+3825709,2015-12-30,2015/2016,Sevilla,Espanyol,train
+3825710,2015-12-30,2015/2016,Real Madrid,Real Sociedad,train
+3825711,2015-12-30,2015/2016,Rayo Vallecano,Atlético Madrid,train
+3825712,2015-12-30,2015/2016,Getafe,RC Deportivo La Coruña,train
+3825713,2015-12-31,2015/2016,Villarreal,Valencia,train
+266670,2016-01-02,2015/2016,Espanyol,Barcelona,train
+3825714,2016-01-02,2015/2016,Atlético Madrid,Levante UD,train
+3825715,2016-01-02,2015/2016,Málaga,Celta Vigo,train
+3825716,2016-01-03,2015/2016,Rayo Vallecano,Real Sociedad,train
+3825717,2016-01-03,2015/2016,Granada,Sevilla,train
+3825718,2016-01-03,2015/2016,Valencia,Real Madrid,train
+3825719,2016-01-03,2015/2016,Athletic Club,Las Palmas,train
+3825720,2016-01-03,2015/2016,Real Betis,Eibar,train
+3825721,2016-01-03,2015/2016,RC Deportivo La Coruña,Villarreal,train
+3825722,2016-01-04,2015/2016,Sporting Gijón,Getafe,train
+266620,2016-01-09,2015/2016,Barcelona,Granada,train
+3825723,2016-01-09,2015/2016,Levante UD,Rayo Vallecano,train
+3825724,2016-01-09,2015/2016,Real Madrid,RC Deportivo La Coruña,train
+3825725,2016-01-09,2015/2016,Getafe,Real Betis,train
+3825726,2016-01-09,2015/2016,Sevilla,Athletic Club,train
+3825727,2016-01-10,2015/2016,Eibar,Espanyol,train
+3825728,2016-01-10,2015/2016,Celta Vigo,Atlético Madrid,train
+3825729,2016-01-10,2015/2016,Villarreal,Sporting Gijón,train
+3825730,2016-01-10,2015/2016,Real Sociedad,Valencia,train
+3825731,2016-01-10,2015/2016,Las Palmas,Málaga,train
+3825732,2016-01-16,2015/2016,Celta Vigo,Levante UD,validation
+3825733,2016-01-16,2015/2016,Sevilla,Málaga,validation
+3825734,2016-01-16,2015/2016,Real Sociedad,RC Deportivo La Coruña,validation
+3825735,2016-01-16,2015/2016,Villarreal,Real Betis,validation
+266149,2016-01-17,2015/2016,Barcelona,Athletic Club,validation
+3825736,2016-01-17,2015/2016,Valencia,Rayo Vallecano,validation
+3825737,2016-01-17,2015/2016,Getafe,Espanyol,validation
+3825738,2016-01-17,2015/2016,Las Palmas,Atlético Madrid,validation
+3825739,2016-01-17,2015/2016,Real Madrid,Sporting Gijón,validation
+3825740,2016-01-18,2015/2016,Eibar,Granada,validation
+3825741,2016-01-22,2015/2016,Sporting Gijón,Real Sociedad,validation
+265894,2016-01-23,2015/2016,Málaga,Barcelona,validation
+3825742,2016-01-23,2015/2016,Granada,Getafe,validation
+3825743,2016-01-23,2015/2016,Rayo Vallecano,Celta Vigo,validation
+3825744,2016-01-23,2015/2016,Espanyol,Villarreal,validation
+3825745,2016-01-24,2015/2016,RC Deportivo La Coruña,Valencia,validation
+3825746,2016-01-24,2015/2016,Real Betis,Real Madrid,validation
+3825747,2016-01-24,2015/2016,Athletic Club,Eibar,validation
+3825748,2016-01-24,2015/2016,Atlético Madrid,Sevilla,validation
+3825749,2016-01-25,2015/2016,Levante UD,Las Palmas,validation
+267576,2016-01-30,2015/2016,Barcelona,Atlético Madrid,validation
+3825750,2016-01-30,2015/2016,Real Sociedad,Real Betis,validation
+3825751,2016-01-30,2015/2016,Getafe,Athletic Club,validation
+3825752,2016-01-30,2015/2016,Eibar,Málaga,validation
+3825753,2016-01-30,2015/2016,Villarreal,Granada,validation
+3825754,2016-01-31,2015/2016,Las Palmas,Celta Vigo,validation
+3825755,2016-01-31,2015/2016,Valencia,Sporting Gijón,validation
+3825756,2016-01-31,2015/2016,Sevilla,Levante UD,validation
+3825757,2016-01-31,2015/2016,Real Madrid,Espanyol,validation
+3825758,2016-02-01,2015/2016,RC Deportivo La Coruña,Rayo Vallecano,validation
+3825759,2016-02-05,2015/2016,Málaga,Getafe,validation
+3825760,2016-02-06,2015/2016,Atlético Madrid,Eibar,validation
+3825761,2016-02-06,2015/2016,Athletic Club,Villarreal,validation
+3825762,2016-02-06,2015/2016,Sporting Gijón,RC Deportivo La Coruña,validation
+3825763,2016-02-06,2015/2016,Rayo Vallecano,Las Palmas,validation
+266160,2016-02-07,2015/2016,Levante UD,Barcelona,validation
+3825764,2016-02-07,2015/2016,Granada,Real Madrid,validation
+3825765,2016-02-07,2015/2016,Celta Vigo,Sevilla,validation
+3825766,2016-02-07,2015/2016,Real Betis,Valencia,validation
+3825767,2016-02-08,2015/2016,Espanyol,Real Sociedad,validation
+3825768,2016-02-12,2015/2016,Sporting Gijón,Rayo Vallecano,validation
+3825769,2016-02-13,2015/2016,Villarreal,Málaga,validation
+3825770,2016-02-13,2015/2016,Real Madrid,Athletic Club,validation
+3825771,2016-02-13,2015/2016,RC Deportivo La Coruña,Real Betis,validation
+3825772,2016-02-13,2015/2016,Valencia,Espanyol,validation
+266254,2016-02-14,2015/2016,Barcelona,Celta Vigo,validation
+3825773,2016-02-14,2015/2016,Eibar,Levante UD,validation
+3825774,2016-02-14,2015/2016,Getafe,Atlético Madrid,validation
+3825775,2016-02-14,2015/2016,Real Sociedad,Granada,validation
+3825776,2016-02-14,2015/2016,Sevilla,Las Palmas,validation
+266815,2016-02-17,2015/2016,Sporting Gijón,Barcelona,calibration
+3825777,2016-02-19,2015/2016,Levante UD,Getafe,calibration
+267273,2016-02-20,2015/2016,Las Palmas,Barcelona,calibration
+3825778,2016-02-20,2015/2016,Real Betis,Sporting Gijón,calibration
+3825779,2016-02-20,2015/2016,Celta Vigo,Eibar,calibration
+3825780,2016-02-20,2015/2016,Espanyol,RC Deportivo La Coruña,calibration
+3825781,2016-02-21,2015/2016,Rayo Vallecano,Sevilla,calibration
+3825782,2016-02-21,2015/2016,Granada,Valencia,calibration
+3825783,2016-02-21,2015/2016,Athletic Club,Real Sociedad,calibration
+3825784,2016-02-21,2015/2016,Atlético Madrid,Villarreal,calibration
+3825785,2016-02-21,2015/2016,Málaga,Real Madrid,calibration
+3825786,2016-02-26,2015/2016,Eibar,Las Palmas,calibration
+3825787,2016-02-27,2015/2016,Real Madrid,Atlético Madrid,calibration
+3825788,2016-02-27,2015/2016,Getafe,Celta Vigo,calibration
+3825789,2016-02-27,2015/2016,Real Sociedad,Málaga,calibration
+3825790,2016-02-27,2015/2016,Sporting Gijón,Espanyol,calibration
+3825791,2016-02-27,2015/2016,Real Betis,Rayo Vallecano,calibration
+265839,2016-02-28,2015/2016,Barcelona,Sevilla,calibration
+3825792,2016-02-28,2015/2016,RC Deportivo La Coruña,Granada,calibration
+3825793,2016-02-28,2015/2016,Valencia,Athletic Club,calibration
+3825794,2016-02-28,2015/2016,Villarreal,Levante UD,calibration
+3825795,2016-03-01,2015/2016,Atlético Madrid,Real Sociedad,calibration
+3825796,2016-03-01,2015/2016,Las Palmas,Getafe,calibration
+3825797,2016-03-02,2015/2016,Athletic Club,RC Deportivo La Coruña,calibration
+3825798,2016-03-02,2015/2016,Levante UD,Real Madrid,calibration
+3825799,2016-03-02,2015/2016,Málaga,Valencia,calibration
+3825800,2016-03-02,2015/2016,Celta Vigo,Villarreal,calibration
+3825801,2016-03-02,2015/2016,Sevilla,Eibar,calibration
+266653,2016-03-03,2015/2016,Rayo Vallecano,Barcelona,calibration
+3825802,2016-03-03,2015/2016,Espanyol,Real Betis,calibration
+3825803,2016-03-03,2015/2016,Granada,Sporting Gijón,calibration
+3825804,2016-03-05,2015/2016,RC Deportivo La Coruña,Málaga,calibration
+3825805,2016-03-05,2015/2016,Villarreal,Las Palmas,calibration
+3825806,2016-03-05,2015/2016,Real Madrid,Celta Vigo,calibration
+3825867,2016-03-05,2015/2016,Getafe,Sevilla,calibration
+266056,2016-03-06,2015/2016,Eibar,Barcelona,calibration
+3825807,2016-03-06,2015/2016,Valencia,Atlético Madrid,calibration
+3825808,2016-03-06,2015/2016,Sporting Gijón,Athletic Club,calibration
+3825809,2016-03-06,2015/2016,Real Betis,Granada,calibration
+3825810,2016-03-06,2015/2016,Real Sociedad,Levante UD,calibration
+3825811,2016-03-07,2015/2016,Espanyol,Rayo Vallecano,calibration
+3825812,2016-03-11,2015/2016,Málaga,Sporting Gijón,calibration
+266498,2016-03-12,2015/2016,Barcelona,Getafe,calibration
+3825813,2016-03-12,2015/2016,Atlético Madrid,RC Deportivo La Coruña,calibration
+3825814,2016-03-12,2015/2016,Celta Vigo,Real Sociedad,calibration
+3825858,2016-03-12,2015/2016,Rayo Vallecano,Eibar,calibration
+3825815,2016-03-13,2015/2016,Levante UD,Valencia,calibration
+3825816,2016-03-13,2015/2016,Sevilla,Villarreal,calibration
+3825844,2016-03-13,2015/2016,Athletic Club,Real Betis,calibration
+3825879,2016-03-13,2015/2016,Las Palmas,Real Madrid,calibration
+3825881,2016-03-14,2015/2016,Granada,Espanyol,calibration
+3825817,2016-03-18,2015/2016,Getafe,Eibar,calibration
+3825818,2016-03-19,2015/2016,Real Sociedad,Las Palmas,calibration
+3825880,2016-03-19,2015/2016,RC Deportivo La Coruña,Levante UD,calibration
+3825887,2016-03-19,2015/2016,Granada,Rayo Vallecano,calibration
+3825903,2016-03-19,2015/2016,Real Betis,Málaga,calibration
+3825907,2016-03-19,2015/2016,Sporting Gijón,Atlético Madrid,calibration
+266106,2016-03-20,2015/2016,Villarreal,Barcelona,calibration
+3825819,2016-03-20,2015/2016,Valencia,Celta Vigo,calibration
+3825820,2016-03-20,2015/2016,Real Madrid,Sevilla,calibration
+3825821,2016-03-20,2015/2016,Espanyol,Athletic Club,calibration
+3825885,2016-04-01,2015/2016,Rayo Vallecano,Getafe,calibration
+267533,2016-04-02,2015/2016,Barcelona,Real Madrid,pilot_holdout
+3825822,2016-04-02,2015/2016,Las Palmas,Valencia,pilot_holdout
+3825872,2016-04-02,2015/2016,Atlético Madrid,Real Betis,pilot_holdout
+3825898,2016-04-02,2015/2016,Celta Vigo,RC Deportivo La Coruña,pilot_holdout
+3825823,2016-04-03,2015/2016,Sevilla,Real Sociedad,pilot_holdout
+3825824,2016-04-03,2015/2016,Eibar,Villarreal,pilot_holdout
+3825877,2016-04-03,2015/2016,Athletic Club,Granada,pilot_holdout
+3825905,2016-04-03,2015/2016,Málaga,Espanyol,pilot_holdout
+3825825,2016-04-04,2015/2016,Levante UD,Sporting Gijón,pilot_holdout
+3825826,2016-04-08,2015/2016,Granada,Málaga,pilot_holdout
+266664,2016-04-09,2015/2016,Real Sociedad,Barcelona,pilot_holdout
+3825827,2016-04-09,2015/2016,Real Betis,Levante UD,pilot_holdout
+3825828,2016-04-09,2015/2016,Espanyol,Atlético Madrid,pilot_holdout
+3825856,2016-04-09,2015/2016,Real Madrid,Eibar,pilot_holdout
+3825829,2016-04-10,2015/2016,Athletic Club,Rayo Vallecano,pilot_holdout
+3825830,2016-04-10,2015/2016,Villarreal,Getafe,pilot_holdout
+3825831,2016-04-10,2015/2016,Valencia,Sevilla,pilot_holdout
+3825832,2016-04-10,2015/2016,Sporting Gijón,Celta Vigo,pilot_holdout
+3825863,2016-04-11,2015/2016,RC Deportivo La Coruña,Las Palmas,pilot_holdout
+3825857,2016-04-15,2015/2016,Levante UD,Espanyol,pilot_holdout
+3825833,2016-04-16,2015/2016,Getafe,Real Madrid,pilot_holdout
+3825852,2016-04-16,2015/2016,Las Palmas,Sporting Gijón,pilot_holdout
+3825889,2016-04-16,2015/2016,Celta Vigo,Real Betis,pilot_holdout
+3825897,2016-04-16,2015/2016,Eibar,Real Sociedad,pilot_holdout
+266557,2016-04-17,2015/2016,Barcelona,Valencia,pilot_holdout
+3825834,2016-04-17,2015/2016,Atlético Madrid,Granada,pilot_holdout
+3825835,2016-04-17,2015/2016,Málaga,Athletic Club,pilot_holdout
+3825836,2016-04-17,2015/2016,Rayo Vallecano,Villarreal,pilot_holdout
+3825906,2016-04-17,2015/2016,Sevilla,RC Deportivo La Coruña,pilot_holdout
+3825837,2016-04-19,2015/2016,Real Betis,Las Palmas,pilot_holdout
+3825862,2016-04-19,2015/2016,Espanyol,Celta Vigo,pilot_holdout
+266310,2016-04-20,2015/2016,RC Deportivo La Coruña,Barcelona,pilot_holdout
+3825838,2016-04-20,2015/2016,Athletic Club,Atlético Madrid,pilot_holdout
+3825839,2016-04-20,2015/2016,Sporting Gijón,Sevilla,pilot_holdout
+3825840,2016-04-20,2015/2016,Valencia,Eibar,pilot_holdout
+3825843,2016-04-20,2015/2016,Málaga,Rayo Vallecano,pilot_holdout
+3825893,2016-04-20,2015/2016,Real Madrid,Villarreal,pilot_holdout
+3825841,2016-04-21,2015/2016,Real Sociedad,Getafe,pilot_holdout
+3825896,2016-04-21,2015/2016,Granada,Levante UD,pilot_holdout
+3825871,2016-04-22,2015/2016,Las Palmas,Espanyol,pilot_holdout
+265944,2016-04-23,2015/2016,Barcelona,Sporting Gijón,pilot_holdout
+3825847,2016-04-23,2015/2016,Eibar,RC Deportivo La Coruña,pilot_holdout
+3825886,2016-04-23,2015/2016,Rayo Vallecano,Real Madrid,pilot_holdout
+3825890,2016-04-23,2015/2016,Atlético Madrid,Málaga,pilot_holdout
+3825842,2016-04-24,2015/2016,Levante UD,Athletic Club,pilot_holdout
+3825875,2016-04-24,2015/2016,Villarreal,Real Sociedad,pilot_holdout
+3825884,2016-04-24,2015/2016,Sevilla,Real Betis,pilot_holdout
+3825899,2016-04-24,2015/2016,Getafe,Valencia,pilot_holdout
+3825868,2016-04-25,2015/2016,Celta Vigo,Granada,pilot_holdout
+3825854,2016-04-29,2015/2016,Sporting Gijón,Eibar,pilot_holdout
+266986,2016-04-30,2015/2016,Real Betis,Barcelona,pilot_holdout
+3825859,2016-04-30,2015/2016,Granada,Las Palmas,pilot_holdout
+3825864,2016-04-30,2015/2016,Real Sociedad,Real Madrid,pilot_holdout
+3825878,2016-04-30,2015/2016,Atlético Madrid,Rayo Vallecano,pilot_holdout
+3825845,2016-05-01,2015/2016,Espanyol,Sevilla,pilot_holdout
+3825870,2016-05-01,2015/2016,Athletic Club,Celta Vigo,pilot_holdout
+3825873,2016-05-01,2015/2016,Valencia,Villarreal,pilot_holdout
+3825894,2016-05-01,2015/2016,RC Deportivo La Coruña,Getafe,pilot_holdout
+3825855,2016-05-02,2015/2016,Málaga,Levante UD,pilot_holdout
+265958,2016-05-08,2015/2016,Barcelona,Espanyol,pilot_holdout
+3825850,2016-05-08,2015/2016,Celta Vigo,Málaga,pilot_holdout
+3825851,2016-05-08,2015/2016,Villarreal,RC Deportivo La Coruña,pilot_holdout
+3825853,2016-05-08,2015/2016,Sevilla,Granada,pilot_holdout
+3825860,2016-05-08,2015/2016,Levante UD,Atlético Madrid,pilot_holdout
+3825861,2016-05-08,2015/2016,Real Sociedad,Rayo Vallecano,pilot_holdout
+3825865,2016-05-08,2015/2016,Getafe,Sporting Gijón,pilot_holdout
+3825866,2016-05-08,2015/2016,Las Palmas,Athletic Club,pilot_holdout
+3825901,2016-05-08,2015/2016,Real Madrid,Valencia,pilot_holdout
+3825904,2016-05-08,2015/2016,Eibar,Real Betis,pilot_holdout
+3825849,2016-05-13,2015/2016,Valencia,Real Sociedad,pilot_holdout
+267506,2016-05-14,2015/2016,Granada,Barcelona,pilot_holdout
+3825846,2016-05-14,2015/2016,RC Deportivo La Coruña,Real Madrid,pilot_holdout
+3825869,2016-05-14,2015/2016,Athletic Club,Sevilla,pilot_holdout
+3825882,2016-05-14,2015/2016,Atlético Madrid,Celta Vigo,pilot_holdout
+3825876,2016-05-15,2015/2016,Real Betis,Getafe,pilot_holdout
+3825883,2016-05-15,2015/2016,Málaga,Las Palmas,pilot_holdout
+3825900,2016-05-15,2015/2016,Sporting Gijón,Villarreal,pilot_holdout
+3825902,2016-05-15,2015/2016,Rayo Vallecano,Levante UD,pilot_holdout
+3825908,2016-05-15,2015/2016,Espanyol,Eibar,pilot_holdout
+267670,2016-08-20,2016/2017,Barcelona,Real Betis,final_test
+266892,2016-08-28,2016/2017,Athletic Club,Barcelona,final_test
+266669,2016-09-10,2016/2017,Barcelona,Deportivo Alavés,final_test
+267212,2016-09-17,2016/2017,Leganés,Barcelona,final_test
+267220,2016-09-21,2016/2017,Barcelona,Atlético Madrid,final_test
+267492,2016-10-15,2016/2017,Barcelona,RC Deportivo La Coruña,final_test
+266033,2016-10-22,2016/2017,Valencia,Barcelona,final_test
+267058,2016-10-29,2016/2017,Barcelona,Granada,final_test
+266989,2016-11-06,2016/2017,Sevilla,Barcelona,final_test
+266191,2016-11-27,2016/2017,Real Sociedad,Barcelona,final_test
+267076,2016-12-03,2016/2017,Barcelona,Real Madrid,final_test
+266357,2016-12-10,2016/2017,Osasuna,Barcelona,final_test
+266528,2016-12-18,2016/2017,Barcelona,Espanyol,final_test
+266477,2017-01-08,2016/2017,Villarreal,Barcelona,final_test
+267395,2017-01-14,2016/2017,Barcelona,Las Palmas,final_test
+266731,2017-01-22,2016/2017,Eibar,Barcelona,final_test
+266516,2017-01-29,2016/2017,Real Betis,Barcelona,final_test
+266874,2017-02-04,2016/2017,Barcelona,Athletic Club,final_test
+266273,2017-02-11,2016/2017,Deportivo Alavés,Barcelona,final_test
+267596,2017-02-19,2016/2017,Barcelona,Leganés,final_test
+267464,2017-02-26,2016/2017,Atlético Madrid,Barcelona,final_test
+265952,2017-03-01,2016/2017,Barcelona,Sporting Gijón,final_test
+266299,2017-03-04,2016/2017,Barcelona,Celta Vigo,final_test
+267660,2017-03-12,2016/2017,RC Deportivo La Coruña,Barcelona,final_test
+266440,2017-03-19,2016/2017,Barcelona,Valencia,final_test
+266280,2017-04-05,2016/2017,Barcelona,Sevilla,final_test
+267590,2017-04-08,2016/2017,Málaga,Barcelona,final_test
+267373,2017-04-15,2016/2017,Barcelona,Real Sociedad,final_test
+267569,2017-04-23,2016/2017,Real Madrid,Barcelona,final_test
+267101,2017-04-26,2016/2017,Barcelona,Osasuna,final_test
+267077,2017-04-29,2016/2017,Espanyol,Barcelona,final_test
+266952,2017-05-06,2016/2017,Barcelona,Villarreal,final_test
+267039,2017-05-14,2016/2017,Las Palmas,Barcelona,final_test
+267432,2017-05-21,2016/2017,Barcelona,Eibar,final_test

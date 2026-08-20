@@ -1,0 +1,101 @@
+[
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_H <= 0.570706 and diff_p1_maximum_zone_leakage_expanding <= 0.777167",
+    "value":[
+      0.2956015515
+    ],
+    "n_training_rows":162
+  },
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_H <= 0.570706 and diff_p1_maximum_zone_leakage_expanding > 0.777167",
+    "value":[
+      -2.3727562568
+    ],
+    "n_training_rows":8
+  },
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_H > 0.570706 and home_p1_median_zone_leakage_roll3 <= 0.0834329",
+    "value":[
+      2.6006068998
+    ],
+    "n_training_rows":20
+  },
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_H > 0.570706 and home_p1_median_zone_leakage_roll3 > 0.0834329",
+    "value":[
+      1.1837352445
+    ],
+    "n_training_rows":49
+  },
+  {
+    "tree":1,
+    "depth":1,
+    "rule":"diff_event_yellow_cards_roll10 <= -0.683333",
+    "value":[
+      0.865885019
+    ],
+    "n_training_rows":65
+  },
+  {
+    "tree":1,
+    "depth":2,
+    "rule":"diff_event_yellow_cards_roll10 > -0.683333 and home_event_interceptions_expanding <= 14.5464",
+    "value":[
+      0.7799052649
+    ],
+    "n_training_rows":27
+  },
+  {
+    "tree":1,
+    "depth":3,
+    "rule":"diff_event_yellow_cards_roll10 > -0.683333 and home_event_interceptions_expanding > 14.5464 and away_event_final_third_entries_roll10 <= 76.45",
+    "value":[
+      -0.3180150494
+    ],
+    "n_training_rows":93
+  },
+  {
+    "tree":1,
+    "depth":4,
+    "rule":"diff_event_yellow_cards_roll10 > -0.683333 and home_event_interceptions_expanding > 14.5464 and away_event_final_third_entries_roll10 > 76.45 and away_p1_possession_losses_roll10 <= 66.35",
+    "value":[
+      -1.0547585357
+    ],
+    "n_training_rows":52
+  },
+  {
+    "tree":1,
+    "depth":4,
+    "rule":"diff_event_yellow_cards_roll10 > -0.683333 and home_event_interceptions_expanding > 14.5464 and away_event_final_third_entries_roll10 > 76.45 and away_p1_possession_losses_roll10 > 66.35",
+    "value":[
+      -4.9148528053
+    ],
+    "n_training_rows":2
+  },
+  {
+    "tree":2,
+    "depth":1,
+    "rule":"away_event_duels_won_roll10 <= 9.36667",
+    "value":[
+      -1.4170422587
+    ],
+    "n_training_rows":14
+  },
+  {
+    "tree":2,
+    "depth":1,
+    "rule":"away_event_duels_won_roll10 > 9.36667",
+    "value":[
+      0.1192471379
+    ],
+    "n_training_rows":225
+  }
+]

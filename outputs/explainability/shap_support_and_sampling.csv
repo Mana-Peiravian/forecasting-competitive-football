@@ -1,0 +1,17 @@
+task,model,status,rows_explained,error,sampling
+prematch_classification,random_forest,success,79.0,,
+prematch_classification,gradient_boosting,unsupported_or_failed,,InvalidModelError: GradientBoostingClassifier is only supported for binary classification right now!,
+prematch_classification,xgboost,success,79.0,,
+prematch_classification,lightgbm,success,79.0,,
+prematch_regression,random_forest,success,79.0,,
+prematch_regression,gradient_boosting,success,79.0,,
+prematch_regression,xgboost,success,79.0,,
+prematch_regression,lightgbm,success,79.0,,
+snapshot_classification,random_forest,success,300.0,,seeded simple random pilot sample
+snapshot_classification,gradient_boosting,unsupported_or_failed,,InvalidModelError: GradientBoostingClassifier is only supported for binary classification right now!,
+snapshot_classification,xgboost,success,300.0,,seeded simple random pilot sample
+snapshot_classification,lightgbm,success,300.0,,seeded simple random pilot sample
+snapshot_regression,random_forest,success,300.0,,seeded simple random pilot sample
+snapshot_regression,gradient_boosting,success,300.0,,seeded simple random pilot sample
+snapshot_regression,xgboost,success,300.0,,seeded simple random pilot sample
+snapshot_regression,lightgbm,success,300.0,,seeded simple random pilot sample

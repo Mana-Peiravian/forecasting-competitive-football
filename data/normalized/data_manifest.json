@@ -1,0 +1,90 @@
+{
+  "sources": {
+    "statsbomb": "https://github.com/statsbomb/open-data",
+    "football_data_2015/2016": "https://www.football-data.co.uk/mmz4281/1516/SP1.csv",
+    "football_data_2016/2017": "https://www.football-data.co.uk/mmz4281/1617/SP1.csv"
+  },
+  "tables": {
+    "competitions": {
+      "path": "data\\normalized\\competitions.parquet",
+      "sha256": "acb72923c216e79eebc9dc056d4a390aa6a69ba6550518f26868ffd6d4a72b3a",
+      "rows": 2
+    },
+    "matches": {
+      "path": "data\\normalized\\matches.parquet",
+      "sha256": "7abc3102cdf11da5e07654a232d87000e314eb4d2fa07a5400a89fd0011b8ac3",
+      "rows": 414
+    },
+    "teams": {
+      "path": "data\\normalized\\teams.parquet",
+      "sha256": "86509a6d0e24f2c6d665616d4c45ca8c43bbfa1b530948533d31fb5f7252e1c6",
+      "rows": 23
+    },
+    "players": {
+      "path": "data\\normalized\\players.parquet",
+      "sha256": "c716200880abe953baaef3d093d7181ecf51a99e0502ed47a89ac39e05e9143c",
+      "rows": 657
+    },
+    "lineups": {
+      "path": "data\\normalized\\lineups.parquet",
+      "sha256": "12c6bc36548b544857d858c457e3a7165182d0e7fbc416875621b6305e144c7f",
+      "rows": 14899
+    },
+    "events": {
+      "path": "data\\normalized\\events.parquet",
+      "sha256": "1371e787a811a6990a1314c947993c73f6438d9627da6327c7e4cca7b4f84c09",
+      "rows": 1420167
+    },
+    "three_sixty": {
+      "path": "data\\normalized\\three_sixty.parquet",
+      "sha256": "fd57d0ae6bb12c542ad4a32e5ee5371e1cc09ef27016f0bc9f4d4ac76c3d76a6",
+      "rows": 0
+    },
+    "three_sixty_availability": {
+      "path": "data\\normalized\\three_sixty_availability.parquet",
+      "sha256": "f7b44e716c96039e242d47270682ff47f3633126e9a3c2979c4ff94acbc24e0c",
+      "rows": 2
+    },
+    "odds": {
+      "path": "data\\normalized\\odds.parquet",
+      "sha256": "529d81a3801d2d3b1fb575139457fd0fcf79bf507e84fd5ab2ec84c8984f0e9a",
+      "rows": 414
+    },
+    "integrated_matches": {
+      "path": "data\\normalized\\integrated_matches.parquet",
+      "sha256": "e82734b2b8f289346e391f4f9d4102525c796fa3903617fada2d7c3e8e2581ee",
+      "rows": 414
+    },
+    "odds_join_diagnostics": {
+      "path": "data\\normalized\\odds_join_diagnostics.parquet",
+      "sha256": "5d136e6b16ad82f767cac689901323b9986421339f079a441c854ac4108abcf1",
+      "rows": 414
+    },
+    "team_aliases": {
+      "path": "data\\normalized\\team_aliases.parquet",
+      "sha256": "8c4365c9020da2276bd15168aa4bb977905512f88acc1d0d54d34b7ee1760955",
+      "rows": 24
+    },
+    "sealed_targets": {
+      "path": "data\\normalized\\sealed_targets.parquet",
+      "sha256": "25e6e3212350e24866ee070c32c72fb6133e41e1d657742af9f5bc29b38694d9",
+      "rows": 414
+    },
+    "development_targets": {
+      "path": "data\\normalized\\development_targets.parquet",
+      "sha256": "1d2e013ab0ba7ff672db68e550611720715a50c6f9ad65907b3c1049c712badc",
+      "rows": 380
+    },
+    "final_targets_sealed": {
+      "path": "data\\normalized\\final_targets_sealed.parquet",
+      "sha256": "728c9f6290e1a8a4d9d8c0d6858ca4f72f3f5523e9e97c89914eaa228fa931dc",
+      "rows": 34
+    }
+  },
+  "notes": [
+    "Odds joins use only date and explicit home/away team aliases.",
+    "Scores and match statistics are not odds-join keys.",
+    "2016/17 open StatsBomb La Liga contains 34 available matches, not the full league season.",
+    "The sealed target file is excluded from all selection, calibration, and feature-building functions."
+  ]
+}

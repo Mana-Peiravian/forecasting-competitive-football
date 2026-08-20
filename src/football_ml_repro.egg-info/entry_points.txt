@@ -1,0 +1,2 @@
+[console_scripts]
+football-ml-reproduce = ml_project.pipeline:main

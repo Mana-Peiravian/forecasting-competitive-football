@@ -1,0 +1,48 @@
+{
+  "locked_at_utc": "2026-08-20T01:38:37.186808+00:00",
+  "purpose": "Freeze every model/feature/calibration choice before opening 2016/17 final labels.",
+  "final_test": {
+    "season": "2016/2017",
+    "available_matches": 34,
+    "match_id_manifest_sha256": "1a736049c2b0ef62db201eb8e53a6bf739727c8bb5f30c378703dd3a3a8d435b",
+    "known_limitation": "StatsBomb open data exposes 34 Barcelona-centered matches, not the full 380-match season."
+  },
+  "protocol": {
+    "classification_headline": "RPS, class order A-D-H",
+    "regression_headline": "MAE with margin clipped to [-5,5]",
+    "calibration": "Platt fixed a priori; fit only on calibration role; phase-specific for Model 3",
+    "base_refit_roles": [
+      "train",
+      "validation",
+      "pilot_holdout"
+    ],
+    "calibration_role": "calibration",
+    "final_role": "final_test",
+    "final_evaluation_runs_allowed": 1
+  },
+  "locked_file_hashes": {
+    "pyproject.toml": "208bee38ba8540e0beddc8a0f1c8bb45ff214cf3e316f19aee904870b858e37b",
+    "environment.yml": "707a6aa2be942c33a82782bca90960b58dffdf5bc2d9396f6f551136e00aa41e",
+    "src/ml_project/config.py": "602aacfc55b235592b3f73051a8d834f84d2848f15a3850035b1bfc22382e752",
+    "src/ml_project/metrics.py": "ed2c9efcb645c8c4d16fdf780dd71f28b597aef28fe0c8f7dc5b7bb9772d644c",
+    "src/ml_project/calibration.py": "8cceb783754a429b3a5794f29fb7d793196102312ba9558f78201ba0546271e1",
+    "src/ml_project/figs.py": "ebd8eb1605f066e031e8ece0dbb05f038bb96253430bbcc646ee450b4a3aaab9",
+    "src/ml_project/network.py": "f4615d6d6d41c47a7339ea709cf669d83dca51bce8ff9ad74d4c70f588388c92",
+    "src/ml_project/features.py": "330d064f5483d4800764ef1fc4ca487970c59782aceb270f6117740ee597557e",
+    "src/ml_project/snapshots.py": "dd8b660b374388941c234c2288ad6aa08f996e0cb28e96622416cc7a37b3a4d1",
+    "src/ml_project/modeling.py": "a6cc17c916256dffd9aca8a2e5f43db447040c6ff7822d4a32a174945f40df4d",
+    "scripts/run_final_evaluation.py": "a78889ed46d108019bf469b086c22cb46c4824bebce066dcd4f147b7976c7138",
+    "outputs/features/prematch_features.parquet": "b0c2ce10450fc93f08375a11946dba6e1972e684da0e44cee04072b967b548fd",
+    "outputs/features/feature_manifest.json": "0ab3623416ce846fda9390f5e837c7697ae409756de256c8651af6d167cd81ee",
+    "outputs/features/split_manifest.csv": "1a736049c2b0ef62db201eb8e53a6bf739727c8bb5f30c378703dd3a3a8d435b",
+    "outputs/snapshots/snapshot_features.parquet": "83ca1deb0d4b9564fa019dd1b3f1522f4b0df623b942f9cf63a8c096e2934fdb",
+    "outputs/snapshots/snapshot_manifest.json": "0fb6db41b2c21a676603779e7b9aa9e4fa856ba45b2c76a9a7df67eb91920fb3",
+    "outputs/experiments/prematch/locked_classifier_specs.csv": "02721d86ed3b7344124df7ac8b61cb23078f25746d4525984b3e5711eeabd987",
+    "outputs/experiments/prematch/locked_regressor_specs.csv": "62dc8ae56e19c77e8e0a174f56ba3faf3de9b8990836d665109ce5cb46adcf12",
+    "outputs/experiments/prematch/development_protocol.json": "33374314c933ff8bb150944d5ea772d0266f804d1b157e0b8beae1af5d5284ec",
+    "outputs/experiments/snapshots/locked_snapshot_specs.json": "82c9ab9f97bc0f938ef6086ace7a4239fe8b37c5658fb2ca01b4d7351159d151",
+    "data/normalized/final_targets_sealed.parquet": "728c9f6290e1a8a4d9d8c0d6858ca4f72f3f5523e9e97c89914eaa228fa931dc"
+  },
+  "git_history": "unavailable in supplied directory; no history fabricated",
+  "final_targets_opened": false
+}

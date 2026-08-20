@@ -1,0 +1,20 @@
+\begin{table}[H]
+\centering\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & MAE & RMSE & $r$ & H/D/A RPS & H/D/A LL & CI low & CI high \\
+\midrule
+random\_forest & \textbf{1.479} & \textbf{1.792} & \textbf{0.766} & \textbf{0.116} & \textbf{0.624} & 1.139 & 1.816 \\
+gradient\_boosting & 1.580 & 1.889 & 0.745 & 0.127 & 0.670 & 1.251 & 1.943 \\
+lightgbm & 1.582 & 1.848 & 0.744 & 0.124 & 0.661 & 1.272 & 1.887 \\
+xgboost & 1.591 & 1.894 & 0.730 & 0.123 & 0.659 & 1.240 & 1.933 \\
+scratch\_figs & 1.640 & 2.043 & 0.752 & 0.130 & 0.674 & 1.263 & 2.073 \\
+svr\_rbf & 2.291 & 2.765 & 0.211 & 0.244 & 1.035 & 1.763 & 2.791 \\
+kernel\_ridge\_exact & 2.294 & 2.839 & 0.211 & 0.262 & 1.093 & 1.735 & 2.853 \\
+nystroem\_ridge & 2.294 & 2.765 & 0.211 & 0.243 & 1.026 & 1.785 & 2.805 \\
+dummy & 2.294 & 2.767 & -- & 0.244 & 1.028 & 1.769 & 2.821 \\
+p1\_ridge & 4.011 & 4.754 & -0.376 & 0.461 & 2.459 & 3.198 & 4.853 \\
+\bottomrule
+\end{tabular}}
+\end{table}

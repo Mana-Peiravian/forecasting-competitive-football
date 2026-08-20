@@ -1,0 +1,101 @@
+[
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_A <= 0.200226 and home_p1_median_zone_leakage_roll5 <= 0.148469",
+    "value":[
+      0.0,
+      0.0909090909,
+      0.9090909091
+    ],
+    "n_training_rows":55
+  },
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_A <= 0.200226 and home_p1_median_zone_leakage_roll5 > 0.148469",
+    "value":[
+      0.0,
+      0.55,
+      0.45
+    ],
+    "n_training_rows":20
+  },
+  {
+    "tree":0,
+    "depth":6,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding <= 1.85165 and diff_p1_median_zone_recovery_roll10 <= 0.0176012 and home_event_shots_on_target_roll5 <= 5.3 and home_event_possessions_expanding <= 178.728 and away_p1_maximum_zone_leakage_roll10 <= 1.35753",
+    "value":[
+      1.0,
+      0.0,
+      0.0
+    ],
+    "n_training_rows":12
+  },
+  {
+    "tree":0,
+    "depth":6,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding <= 1.85165 and diff_p1_median_zone_recovery_roll10 <= 0.0176012 and home_event_shots_on_target_roll5 <= 5.3 and home_event_possessions_expanding <= 178.728 and away_p1_maximum_zone_leakage_roll10 > 1.35753",
+    "value":[
+      0.0,
+      1.0,
+      0.0
+    ],
+    "n_training_rows":3
+  },
+  {
+    "tree":0,
+    "depth":6,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding <= 1.85165 and diff_p1_median_zone_recovery_roll10 <= 0.0176012 and home_event_shots_on_target_roll5 <= 5.3 and home_event_possessions_expanding > 178.728 and home_event_xg_expanding <= 1.00804",
+    "value":[
+      0.25,
+      0.21875,
+      0.53125
+    ],
+    "n_training_rows":32
+  },
+  {
+    "tree":0,
+    "depth":6,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding <= 1.85165 and diff_p1_median_zone_recovery_roll10 <= 0.0176012 and home_event_shots_on_target_roll5 <= 5.3 and home_event_possessions_expanding > 178.728 and home_event_xg_expanding > 1.00804",
+    "value":[
+      0.3243243243,
+      0.5405405405,
+      0.1351351351
+    ],
+    "n_training_rows":37
+  },
+  {
+    "tree":0,
+    "depth":4,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding <= 1.85165 and diff_p1_median_zone_recovery_roll10 <= 0.0176012 and home_event_shots_on_target_roll5 > 5.3",
+    "value":[
+      0.0,
+      0.1111111111,
+      0.8888888889
+    ],
+    "n_training_rows":9
+  },
+  {
+    "tree":0,
+    "depth":3,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding <= 1.85165 and diff_p1_median_zone_recovery_roll10 > 0.0176012",
+    "value":[
+      0.1111111111,
+      0.1111111111,
+      0.7777777778
+    ],
+    "n_training_rows":27
+  },
+  {
+    "tree":0,
+    "depth":2,
+    "rule":"market_prob_A > 0.200226 and away_event_points_expanding > 1.85165",
+    "value":[
+      0.5909090909,
+      0.2272727273,
+      0.1818181818
+    ],
+    "n_training_rows":44
+  }
+]

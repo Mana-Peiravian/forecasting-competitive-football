@@ -1,0 +1,18 @@
+{
+  "class_order": [
+    "A",
+    "D",
+    "H"
+  ],
+  "fit_roles": [
+    "train",
+    "validation"
+  ],
+  "calibration_role": "calibration",
+  "opened_benchmark_role": "pilot_holdout",
+  "forbidden_role": "final_test",
+  "selection_metric_classification": "RPS",
+  "selection_metric_regression": "MAE",
+  "final_calibration_method_fixed_a_priori": "platt",
+  "synthetic_sampling_scope": "prematch training partition only"
+}
