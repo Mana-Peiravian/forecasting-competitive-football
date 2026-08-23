@@ -15,9 +15,12 @@ src/ml_project/figs.py
 src/ml_project/metrics.py
 src/ml_project/modeling.py
 src/ml_project/network.py
+src/ml_project/pipeline.py
 src/ml_project/snapshots.py
+tests/test_api.py
 tests/test_calibration.py
 tests/test_figs.py
 tests/test_metrics.py
 tests/test_network.py
+tests/test_openapi.py
 tests/test_snapshots.py

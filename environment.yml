@@ -16,6 +16,10 @@ dependencies:
   - lightgbm=4.7
   - pip
   - pip:
+      - fastapi==0.141.1
+      - pydantic==2.13.4
+      - uvicorn==0.52.4
+      - httpx2==2.12.0
       - imodels==2.0.4
       - statsbombpy==1.21.0
       - imbalanced-learn==0.14.2

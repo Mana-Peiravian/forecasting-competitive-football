@@ -1,0 +1,9 @@
+{
+  "model1_rf_platt_rps": 0.1198755835901659,
+  "market_raw_rps": 0.1314648210921279,
+  "model2_rf_mae": 1.4789752014274438,
+  "model3_gb_raw_rps": 0.1156733552712433,
+  "model3_xgb_mae": 1.2755347110515594,
+  "final_matches": 34,
+  "final_snapshots": 646
+}

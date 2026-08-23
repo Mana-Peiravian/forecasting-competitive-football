@@ -1,0 +1,122 @@
+site_name: Forecasting Competitive Football
+site_description: Leakage-safe pre-match and in-play football forecasting from raw StatsBomb event data.
+site_url: https://mana-peiravian.github.io/forecasting-competitive-football/
+repo_url: https://github.com/Mana-Peiravian/forecasting-competitive-football
+repo_name: Mana-Peiravian/forecasting-competitive-football
+edit_uri: edit/main/docs/
+use_directory_urls: true
+strict: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+  - javascripts/mermaid.js
+
+nav:
+  - Home: index.md
+  - Project:
+      - Overview: project/overview.md
+      - Architecture: project/architecture.md
+      - Dataset: project/dataset.md
+      - Data Pipeline: project/pipeline.md
+      - Leakage Prevention: project/leakage.md
+      - Repository Structure: project/repository.md
+      - Implementation Audit: site_implementation_audit.md
+  - Models:
+      - Model 1 — Pre-Match Outcome: models/model1.md
+      - Model 2 — Goal Margin: models/model2.md
+      - Model 3 — In-Play: models/model3.md
+      - Comparison: models/comparison.md
+      - Calibration: models/calibration.md
+      - Explainability: models/explainability.md
+  - Research Papers:
+      - P1 — Multilayer Soccer Networks: papers/p1.md
+      - P2 — FIGS: papers/p2.md
+      - P1 + P2 Integration: papers/p1_p2.md
+  - API:
+      - Overview: api/overview.md
+      - Quickstart: api/quickstart.md
+      - Endpoints: api/endpoints.md
+      - Schemas: api/schemas.md
+      - Examples: api/examples.md
+      - Error Handling: api/errors.md
+      - Swagger UI: api/swagger/index.html
+      - ReDoc: api/redoc/index.html
+  - Static Demo: demo.md
+  - Results:
+      - Final Results: results/index.md
+      - Market & Calibration: results/market.md
+      - Compute & Scaling: results/compute.md
+  - Reproducibility:
+      - Installation: reproducibility/installation.md
+      - Data Preparation: reproducibility/data.md
+      - Experiments & Evaluation: reproducibility/experiments.md
+      - Tests & Validation: reproducibility/tests.md
+  - Developer Guide:
+      - API Clients: developer/clients.md
+      - Adding a New Model: developer/new-model.md
+      - Deployment: developer/deployment.md
+  - About:
+      - Report: about/report.md
+      - Limitations: about/limitations.md
+      - References: about/references.md
+      - Validation Report: validation_report.md
+      - Original Completion Audit: project_completion_audit.md
+
+copyright: Historical backtesting and research documentation. StatsBomb attribution retained.

@@ -1,0 +1,6 @@
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+fastapi==0.141.1
+pydantic==2.13.4
+pandas==3.0.5
+pyarrow==21.0.0

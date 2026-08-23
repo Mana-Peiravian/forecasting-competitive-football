@@ -1,0 +1,1549 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Forecasting Competitive Football API",
+    "summary": "Frozen-artifact inference for leakage-safe football forecasts",
+    "description": "Versioned access to the finished project's Model 1 pre-match outcome probabilities, Model 2 signed goal margin, and Model 3 five-minute historical in-play snapshots. The service loads frozen artifacts once and never trains on startup. GitHub Pages hosts the static documentation only; this Python API must run separately.",
+    "contact": {
+      "name": "Project repository",
+      "url": "https://github.com/Mana-Peiravian/forecasting-competitive-football"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000",
+      "description": "Configured API server (local by default)"
+    }
+  ],
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "service"
+        ],
+        "summary": "Check service and artifact readiness",
+        "operationId": "health_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/models": {
+      "get": {
+        "tags": [
+          "service"
+        ],
+        "summary": "List the public frozen model configurations",
+        "operationId": "models_api_v1_models_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/matches": {
+      "get": {
+        "tags": [
+          "matches"
+        ],
+        "summary": "Search the bounded public match catalogue",
+        "operationId": "matches_api_v1_matches_get",
+        "parameters": [
+          {
+            "name": "competition",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "`La Liga` in this release.",
+              "title": "Competition"
+            },
+            "description": "`La Liga` in this release."
+          },
+          {
+            "name": "season",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "examples": [
+                "2016/2017"
+              ],
+              "title": "Season"
+            }
+          },
+          {
+            "name": "team",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Team"
+            }
+          },
+          {
+            "name": "date_from",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Date From"
+            }
+          },
+          {
+            "name": "date_to",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Date To"
+            }
+          },
+          {
+            "name": "split",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "train",
+                    "validation",
+                    "calibration",
+                    "pilot_holdout",
+                    "final_test"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Split"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/matches/{match_id}": {
+      "get": {
+        "tags": [
+          "matches"
+        ],
+        "summary": "Get safe metadata for one match",
+        "operationId": "match_api_v1_matches__match_id__get",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Known StatsBomb match identifier",
+              "title": "Match Id"
+            },
+            "description": "Known StatsBomb match identifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchDetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/predict/prematch/outcome": {
+      "post": {
+        "tags": [
+          "predictions"
+        ],
+        "summary": "Run Model 1 pre-match outcome inference",
+        "description": "Return calibrated P(Home), P(Draw), and P(Away) from frozen kickoff data.",
+        "operationId": "predict_prematch_outcome_api_v1_predict_prematch_outcome_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrematchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrematchOutcomeResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/predict/prematch/margin": {
+      "post": {
+        "tags": [
+          "predictions"
+        ],
+        "summary": "Run Model 2 signed goal-margin inference",
+        "description": "Return expected clipped home-minus-away final goal margin.",
+        "operationId": "predict_prematch_margin_api_v1_predict_prematch_margin_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrematchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrematchMarginResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/predict/prematch": {
+      "post": {
+        "tags": [
+          "predictions"
+        ],
+        "summary": "Run the combined Model 1 and Model 2 forecast",
+        "operationId": "predict_prematch_api_v1_predict_prematch_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrematchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CombinedPrematchResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/predict/inplay": {
+      "post": {
+        "tags": [
+          "predictions"
+        ],
+        "summary": "Run Model 3 at a frozen five-minute snapshot",
+        "description": "Use only the saved features whose events are at or before the snapshot boundary.",
+        "operationId": "predict_inplay_api_v1_predict_inplay_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InPlayRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InPlayResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/matches/{match_id}/timeline": {
+      "get": {
+        "tags": [
+          "predictions"
+        ],
+        "summary": "Replay all 19 Model 3 snapshots for one historical match",
+        "operationId": "timeline_api_v1_matches__match_id__timeline_get",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "description": "Known StatsBomb match identifier",
+              "title": "Match Id"
+            },
+            "description": "Known StatsBomb match identifier"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimelineResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CombinedPrematchResponse": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "title": "Match Id"
+          },
+          "match_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Match Date"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "split": {
+            "type": "string",
+            "enum": [
+              "train",
+              "validation",
+              "calibration",
+              "pilot_holdout",
+              "final_test"
+            ],
+            "title": "Split"
+          },
+          "outcome": {
+            "$ref": "#/components/schemas/PrematchOutcomeResponse"
+          },
+          "margin": {
+            "$ref": "#/components/schemas/PrematchMarginResponse"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "match_date",
+          "home_team",
+          "away_team",
+          "split",
+          "outcome",
+          "margin"
+        ],
+        "title": "CombinedPrematchResponse"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "description": "Stable machine-readable error code."
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "description": "Safe human-readable message."
+          },
+          "details": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Details",
+            "description": "Optional safe context."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "title": "ErrorResponse"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "degraded"
+            ],
+            "title": "Status"
+          },
+          "service": {
+            "type": "string",
+            "const": "forecasting-competitive-football",
+            "title": "Service"
+          },
+          "api_version": {
+            "type": "string",
+            "const": "v1",
+            "title": "Api Version"
+          },
+          "models_loaded": {
+            "type": "boolean",
+            "title": "Models Loaded"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status",
+          "service",
+          "api_version",
+          "models_loaded"
+        ],
+        "title": "HealthResponse",
+        "example": {
+          "api_version": "v1",
+          "models_loaded": true,
+          "service": "forecasting-competitive-football",
+          "status": "ok"
+        }
+      },
+      "InPlayModels": {
+        "properties": {
+          "outcome": {
+            "type": "string",
+            "const": "gradient_boosting",
+            "title": "Outcome"
+          },
+          "margin": {
+            "type": "string",
+            "const": "xgboost",
+            "title": "Margin"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "outcome",
+          "margin"
+        ],
+        "title": "InPlayModels"
+      },
+      "InPlayRequest": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Match Id",
+            "examples": [
+              267670
+            ]
+          },
+          "minute": {
+            "type": "integer",
+            "multipleOf": 5.0,
+            "maximum": 90.0,
+            "minimum": 0.0,
+            "title": "Minute",
+            "description": "Frozen snapshot minute: one of 0, 5, ..., 90.",
+            "examples": [
+              60
+            ]
+          },
+          "second": {
+            "type": "integer",
+            "const": 0,
+            "title": "Second",
+            "description": "The public frozen grid is minute-aligned; only zero is supported.",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "minute"
+        ],
+        "title": "InPlayRequest"
+      },
+      "InPlayResponse": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "title": "Match Id"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "task": {
+            "type": "string",
+            "const": "inplay",
+            "title": "Task"
+          },
+          "snapshot": {
+            "$ref": "#/components/schemas/Snapshot"
+          },
+          "score": {
+            "$ref": "#/components/schemas/Score"
+          },
+          "probabilities": {
+            "$ref": "#/components/schemas/Probabilities",
+            "description": "Raw gradient-boosting probabilities: the final headline Model 3 output."
+          },
+          "calibrated_probabilities": {
+            "$ref": "#/components/schemas/Probabilities",
+            "description": "Phase-Platt alternative; lower final ECE but worse final RPS."
+          },
+          "predicted_class": {
+            "type": "string",
+            "enum": [
+              "away_win",
+              "draw",
+              "home_win"
+            ],
+            "title": "Predicted Class"
+          },
+          "expected_final_margin": {
+            "type": "number",
+            "maximum": 5.0,
+            "minimum": -5.0,
+            "title": "Expected Final Margin"
+          },
+          "derived_outcome_probabilities": {
+            "$ref": "#/components/schemas/Probabilities"
+          },
+          "models": {
+            "$ref": "#/components/schemas/InPlayModels"
+          },
+          "calibrated": {
+            "type": "boolean",
+            "const": false,
+            "title": "Calibrated",
+            "description": "False because `probabilities` is the raw headline output."
+          },
+          "calibration_alternative": {
+            "type": "string",
+            "const": "phase_platt",
+            "title": "Calibration Alternative"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "home_team",
+          "away_team",
+          "task",
+          "snapshot",
+          "score",
+          "probabilities",
+          "calibrated_probabilities",
+          "predicted_class",
+          "expected_final_margin",
+          "derived_outcome_probabilities",
+          "models",
+          "calibrated",
+          "calibration_alternative"
+        ],
+        "title": "InPlayResponse"
+      },
+      "MatchDetail": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Match Id"
+          },
+          "competition": {
+            "type": "string",
+            "const": "La Liga",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "match_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Match Date"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "split": {
+            "type": "string",
+            "enum": [
+              "train",
+              "validation",
+              "calibration",
+              "pilot_holdout",
+              "final_test"
+            ],
+            "title": "Split"
+          },
+          "prematch_prediction_available": {
+            "type": "boolean",
+            "title": "Prematch Prediction Available"
+          },
+          "inplay_prediction_available": {
+            "type": "boolean",
+            "title": "Inplay Prediction Available"
+          },
+          "supported_snapshot_minutes": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Supported Snapshot Minutes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "competition",
+          "season",
+          "match_date",
+          "home_team",
+          "away_team",
+          "split",
+          "prematch_prediction_available",
+          "inplay_prediction_available",
+          "supported_snapshot_minutes"
+        ],
+        "title": "MatchDetail"
+      },
+      "MatchSummary": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Match Id"
+          },
+          "competition": {
+            "type": "string",
+            "const": "La Liga",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "match_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Match Date"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "split": {
+            "type": "string",
+            "enum": [
+              "train",
+              "validation",
+              "calibration",
+              "pilot_holdout",
+              "final_test"
+            ],
+            "title": "Split"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "competition",
+          "season",
+          "match_date",
+          "home_team",
+          "away_team",
+          "split"
+        ],
+        "title": "MatchSummary"
+      },
+      "MatchesResponse": {
+        "properties": {
+          "total": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
+            "title": "Limit"
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Offset"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/MatchSummary"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "total",
+          "limit",
+          "offset",
+          "items"
+        ],
+        "title": "MatchesResponse"
+      },
+      "ModelMetadata": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "task": {
+            "type": "string",
+            "title": "Task"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "feature_set": {
+            "type": "string",
+            "title": "Feature Set"
+          },
+          "n_features": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "N Features"
+          },
+          "calibrated": {
+            "type": "boolean",
+            "title": "Calibrated"
+          },
+          "calibration": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Calibration"
+          },
+          "artifact": {
+            "type": "string",
+            "title": "Artifact",
+            "description": "Repository-relative artifact identifier, never a local path."
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "task",
+          "version",
+          "feature_set",
+          "n_features",
+          "calibrated",
+          "artifact",
+          "available"
+        ],
+        "title": "ModelMetadata"
+      },
+      "ModelsResponse": {
+        "properties": {
+          "class_order": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "away_win",
+                "draw",
+                "home_win"
+              ]
+            },
+            "type": "array",
+            "title": "Class Order"
+          },
+          "models": {
+            "items": {
+              "$ref": "#/components/schemas/ModelMetadata"
+            },
+            "type": "array",
+            "title": "Models"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "class_order",
+          "models"
+        ],
+        "title": "ModelsResponse"
+      },
+      "PrematchMarginResponse": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "title": "Match Id"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "task": {
+            "type": "string",
+            "const": "prematch_margin",
+            "title": "Task"
+          },
+          "expected_goal_margin": {
+            "type": "number",
+            "maximum": 5.0,
+            "minimum": -5.0,
+            "title": "Expected Goal Margin",
+            "description": "Expected clipped home-goals minus away-goals margin."
+          },
+          "derived_outcome_probabilities": {
+            "$ref": "#/components/schemas/Probabilities",
+            "description": "Probabilities derived by the separately fitted Model 2 margin mapper."
+          },
+          "model": {
+            "type": "string",
+            "const": "random_forest",
+            "title": "Model"
+          },
+          "calibrated": {
+            "type": "boolean",
+            "const": false,
+            "title": "Calibrated"
+          },
+          "probability_mapping": {
+            "type": "string",
+            "const": "calibration_block_multinomial_logistic",
+            "title": "Probability Mapping"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "home_team",
+          "away_team",
+          "task",
+          "expected_goal_margin",
+          "derived_outcome_probabilities",
+          "model",
+          "calibrated",
+          "probability_mapping"
+        ],
+        "title": "PrematchMarginResponse"
+      },
+      "PrematchOutcomeResponse": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "title": "Match Id"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "task": {
+            "type": "string",
+            "const": "prematch_outcome",
+            "title": "Task"
+          },
+          "probabilities": {
+            "$ref": "#/components/schemas/Probabilities",
+            "description": "Platt-calibrated Model 1 probabilities."
+          },
+          "raw_probabilities": {
+            "$ref": "#/components/schemas/Probabilities"
+          },
+          "predicted_class": {
+            "type": "string",
+            "enum": [
+              "away_win",
+              "draw",
+              "home_win"
+            ],
+            "title": "Predicted Class"
+          },
+          "model": {
+            "type": "string",
+            "const": "random_forest",
+            "title": "Model"
+          },
+          "calibrated": {
+            "type": "boolean",
+            "const": true,
+            "title": "Calibrated"
+          },
+          "calibration": {
+            "type": "string",
+            "const": "multiclass_platt",
+            "title": "Calibration"
+          },
+          "class_order": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "away_win",
+                "draw",
+                "home_win"
+              ]
+            },
+            "type": "array",
+            "title": "Class Order"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "home_team",
+          "away_team",
+          "task",
+          "probabilities",
+          "raw_probabilities",
+          "predicted_class",
+          "model",
+          "calibrated",
+          "calibration",
+          "class_order"
+        ],
+        "title": "PrematchOutcomeResponse"
+      },
+      "PrematchRequest": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Match Id",
+            "description": "StatsBomb match identifier present in the frozen feature store.",
+            "examples": [
+              267670
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id"
+        ],
+        "title": "PrematchRequest"
+      },
+      "Probabilities": {
+        "properties": {
+          "home_win": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Home Win"
+          },
+          "draw": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Draw"
+          },
+          "away_win": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Away Win"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "home_win",
+          "draw",
+          "away_win"
+        ],
+        "title": "Probabilities"
+      },
+      "Score": {
+        "properties": {
+          "home": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Home"
+          },
+          "away": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Away"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "home",
+          "away"
+        ],
+        "title": "Score"
+      },
+      "Snapshot": {
+        "properties": {
+          "minute": {
+            "type": "integer",
+            "maximum": 90.0,
+            "minimum": 0.0,
+            "title": "Minute"
+          },
+          "second": {
+            "type": "integer",
+            "const": 0,
+            "title": "Second"
+          },
+          "boundary": {
+            "type": "string",
+            "const": "event_seconds_exact <= snapshot_seconds",
+            "title": "Boundary"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "minute",
+          "second",
+          "boundary"
+        ],
+        "title": "Snapshot"
+      },
+      "TimelinePoint": {
+        "properties": {
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "score": {
+            "$ref": "#/components/schemas/Score"
+          },
+          "probabilities": {
+            "$ref": "#/components/schemas/Probabilities"
+          },
+          "calibrated_probabilities": {
+            "$ref": "#/components/schemas/Probabilities"
+          },
+          "expected_final_margin": {
+            "type": "number",
+            "title": "Expected Final Margin"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "minute",
+          "score",
+          "probabilities",
+          "calibrated_probabilities",
+          "expected_final_margin"
+        ],
+        "title": "TimelinePoint"
+      },
+      "TimelineResponse": {
+        "properties": {
+          "match_id": {
+            "type": "integer",
+            "title": "Match Id"
+          },
+          "home_team": {
+            "type": "string",
+            "title": "Home Team"
+          },
+          "away_team": {
+            "type": "string",
+            "title": "Away Team"
+          },
+          "historical_replay": {
+            "type": "boolean",
+            "const": true,
+            "title": "Historical Replay"
+          },
+          "boundary": {
+            "type": "string",
+            "const": "event_seconds_exact <= snapshot_seconds",
+            "title": "Boundary"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/TimelinePoint"
+            },
+            "type": "array",
+            "title": "Points"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "home_team",
+          "away_team",
+          "historical_replay",
+          "boundary",
+          "points"
+        ],
+        "title": "TimelineResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "service",
+      "description": "Health and frozen-model metadata."
+    },
+    {
+      "name": "matches",
+      "description": "Bounded lookup over the public frozen match store."
+    },
+    {
+      "name": "predictions",
+      "description": "Model 1, Model 2, and Model 3 inference."
+    }
+  ]
+}

@@ -19,8 +19,12 @@ Requires-Dist: lightgbm==4.7.0
 Requires-Dist: imbalanced-learn==0.14.2
 Requires-Dist: shap==0.52.0
 Requires-Dist: psutil==7.0.0
+Requires-Dist: fastapi==0.141.1
+Requires-Dist: pydantic==2.13.4
+Requires-Dist: uvicorn==0.52.4
 Provides-Extra: dev
 Requires-Dist: pytest==9.1.1; extra == "dev"
 Requires-Dist: nbformat==5.10.4; extra == "dev"
 Requires-Dist: imodels==2.0.4; extra == "dev"
 Requires-Dist: mlxtend==0.25.0; extra == "dev"
+Requires-Dist: httpx2==2.12.0; extra == "dev"

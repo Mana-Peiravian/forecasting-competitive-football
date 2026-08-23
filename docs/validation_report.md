@@ -43,7 +43,12 @@
 
 ## Automated checks
 
-`python -m pytest` passes 16 tests. The project itself has a consistent pinned
-dependency set. `pip check` reports unrelated pre-existing global conflicts for
-Streamlit/TensorFlow.js; neither is a project dependency nor used by this work.
+The original scientific suite passes 16 tests. The public-interface expansion
+brings the total to 23 passing tests, including end-to-end parity against the
+saved final predictions for all three model tasks, request validation, and
+OpenAPI export consistency. `mkdocs build --strict` succeeds, and the generated
+site checker validates internal links and API assets across 45 HTML files.
 
+The project itself has a consistent pinned dependency set. `pip check` reports
+unrelated pre-existing global conflicts for Streamlit/TensorFlow.js; neither is
+a project dependency nor used by this work.

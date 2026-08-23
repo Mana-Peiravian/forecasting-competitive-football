@@ -25,3 +25,8 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+
+# Local runtime/documentation output
+.env
+site/
+.pytest_cache/

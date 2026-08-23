@@ -1,0 +1,12 @@
+# Minimal runtime for the frozen-artifact FastAPI service.
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+pyarrow==21.0.0
+joblib==1.5.2
+xgboost==3.4.1
+requests==2.32.5
+fastapi==0.141.1
+pydantic==2.13.4
+uvicorn==0.52.4
