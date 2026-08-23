@@ -31,6 +31,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_configured: ${{ steps.configure_pages.outcome == 'success' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -60,14 +62,18 @@ jobs:
         run: python scripts/check_docs.py
 
       - name: Configure GitHub Pages
+        id: configure_pages
         uses: actions/configure-pages@v5
+        continue-on-error: true
 
       - name: Upload Pages artifact
+        if: steps.configure_pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
   deploy:
+    if: needs.build.outputs.pages_configured == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
